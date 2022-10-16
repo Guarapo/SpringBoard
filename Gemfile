@@ -9,7 +9,8 @@ gem 'rails', '~> 7'
 gem 'pg', '>= 0.18', '< 2.0'
 gem 'rack-cors'
 # Use Puma as the app server
-gem "puma", ">= 6"
+# gem "puma", ">= 6"
+gem 'puma', '~> 4.3.9'
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
@@ -51,6 +52,13 @@ group :development do
   gem 'binding_of_caller'
   gem 'pry-rails'
   gem 'annotate', '~> 3.2'
+
+  gem 'capistrano', '~> 3.17', '>= 3.17.1'
+  gem 'capistrano3-puma', require: false
+  gem 'capistrano-bundler', require: false
+  gem 'capistrano-rbenv', require: false
+  gem 'capistrano-rbenv-install', '~> 1.2.0'
+  gem 'capistrano-rails', '~> 1.6', '>= 1.6.2'
 end
 
 group :test do
